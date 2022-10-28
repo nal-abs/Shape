@@ -6,77 +6,9 @@
 	}
 }
 
-.square {
+.square{
+	width: 5em;
+	height: 5em;
+	background-color: black;
 	position: absolute;
-}
-.oneSquare {
-	position: relative;
-	top:0;
-	width: 50px;
-	height: 50px;
-	background-color: black;
-}
-.twoSquare{
-	position: relative;
-	top: 10px;
-	width: 50px;
-	height: 50px;
-	background-color: black;
-}
-.threeSquare{
-	position: relative;
-	top: 20px;
-	width: 50px;
-	height: 50px;
-	background-color: black;
-}
-
-.fourSquare{
-	position: relative;
-	left: 60px;
-	top: 0px;
-	width: 50px;
-	height: 50px;
-	background-color: black;
-}
-.fiveSquare{
-	position: relative;
-	left: 60px;
-	top: 10px;
-	width: 50px;
-	height: 50px;
-	background-color: black;
-}
-.sixSquare{
-	position: relative;
-	left: 60px;
-	top: 20px;
-	width: 50px;
-	height: 50px;
-	background-color: black;
-}
-.sevenSquare{
-	position: relative;
-	left: 120px;
-	top: 0px;
-	width: 50px;
-	height: 50px;
-	background-color: black;
-}
-
-.eightSquare{
-	position: relative;
-	left: 120px;
-	top: 10px;
-	width: 50px;
-	height: 50px;
-	background-color: black;
-}
-.nineSquare{
-	position: relative;
-	left: 120px;
-	top: 20px;
-	width: 50px;
-	height: 50px;
-	background-color: black;
 }

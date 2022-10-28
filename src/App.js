@@ -1,24 +1,9 @@
 import { React } from 'react';
 import './App.scss';
+import Squares from './component/Squares';
 
-const App = () =>
-	<div role="App">
-		<div className="square">
-			<div className="oneSquare"/>
-			<div className="twoSquare"/>
-			<div className="threeSquare"/>
-		</div>
-		<div className="square">
-			<div className="fourSquare"/>
-			<div className="fiveSquare"/>
-			<div className="sixSquare"/>
-		</div>
-		<div className="square">
-			<div className="sevenSquare"/>
-			<div className="eightSquare"/>
-			<div className="nineSquare"/>
-		</div>
-
-	</div>;
+const App = (context) =>
+	<div className="App" role="App">
+		<Squares { ...context }/></div>;
 
 export default App;
