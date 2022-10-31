@@ -1,9 +1,37 @@
+/* eslint-disable no-magic-numbers */
+import { map, range } from '@laufire/utils/collection';
 import { React } from 'react';
 import './App.scss';
-import Squares from './component/Squares';
+const Box = ({ id, style }) =>
+	<div
+		key={ id }
+		style={ style }
+		className="square"
+	/>;
 
-const App = (context) =>
+const Boxes = map(range(0, 9), (number) => {
+	const margin = 100;
+	const size = 50;
+	const colCount = 3;
+	const column = number % colCount;
+	const half = 0.5;
+	const row = (number - column) / colCount;
+	const offset = ((colCount * size) + ((colCount - 1) * margin)) * half;
+
+	return {
+		id: number,
+		style: {
+			width: `${ size }px`,
+			height: `${ size }px`,
+			left: `calc(50vw + ${ (column * margin) - offset }px)`,
+			top: `calc(50vh + ${ (row * margin) - offset }px`,
+		},
+	};
+});
+
+const App = () =>
 	<div className="App" role="App">
-		<Squares { ...context }/></div>;
+		{map(Boxes, Box)}
+	</div>;
 
 export default App;
