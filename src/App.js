@@ -1,7 +1,11 @@
-/* eslint-disable no-magic-numbers */
 import { map, range } from '@laufire/utils/collection';
 import { React } from 'react';
 import './App.scss';
+
+const margin = 100;
+const size = 50;
+const colCount = 3;
+const two = 2;
 const Box = ({ id, style }) =>
 	<div
 		key={ id }
@@ -9,10 +13,7 @@ const Box = ({ id, style }) =>
 		className="square"
 	/>;
 
-const Boxes = map(range(0, 9), (number) => {
-	const margin = 100;
-	const size = 50;
-	const colCount = 3;
+const Boxes = map(range(0, colCount ** two), (number) => {
 	const column = number % colCount;
 	const half = 0.5;
 	const row = (number - column) / colCount;
