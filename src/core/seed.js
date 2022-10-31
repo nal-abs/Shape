@@ -1,5 +1,5 @@
 const seed = {
-	space: 100,
+	selectedShape: 'Square',
 };
 
 export default seed;
