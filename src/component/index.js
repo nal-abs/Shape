@@ -1,7 +1,7 @@
 import { map } from '@laufire/utils/collection';
 import { React } from 'react';
 
-const DropDown = (context) => {
+const Inputs = (context) => {
 	const { config: { shapes }, state: { selectedShape, space }} = context;
 
 	return <div>
@@ -20,4 +20,4 @@ const DropDown = (context) => {
 		</select></div>;
 };
 
-export default DropDown;
+export default Inputs;
