@@ -6,29 +6,32 @@ const height = 300;
 const width = 900;
 const size = 50;
 const oneEighty = 180;
-const radius = 100;
 const angle = 360;
 
-const circles = map(range(0, nine), (number) => {
-	const radian = number * (angle / nine) * Math.PI / oneEighty;
-	const y = Math.sin(radian) * radius;
-	const x = Math.cos(radian) * radius;
+const circles = (context) => {
+	const { state: { space }} = context;
 
-	return {
-		id: number,
-		style: {
-			width: `${ size }px`,
-			height: `${ size }px`,
-			top: `${ height + y }px`,
-			left: `${ width + x }px`,
-		},
-	};
-});
+	return map(range(0, nine), (number) => {
+		const radian = number * (angle / nine) * Math.PI / oneEighty;
+		const y = Math.sin(radian) * space;
+		const x = Math.cos(radian) * space;
+
+		return {
+			id: number,
+			style: {
+				width: `${ size }px`,
+				height: `${ size }px`,
+				top: `${ height + y }px`,
+				left: `${ width + x }px`,
+			},
+		};
+	});
+};
 
 const circle = ({ id, style }) =>
 	<div key={ id } style={ style } className="circle"/>;
 
-const Circle = () =>
-	<div>{map(circles, circle)}</div>;
+const Circle = (context) =>
+	<div>{map(circles(context), circle)}</div>;
 
 export default Circle;

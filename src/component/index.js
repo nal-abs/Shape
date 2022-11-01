@@ -2,10 +2,14 @@ import { map } from '@laufire/utils/collection';
 import { React } from 'react';
 
 const DropDown = (context) => {
-	const { config: { shapes }, state: { selectedShape }} = context;
+	const { config: { shapes }, state: { selectedShape, space }} = context;
 
 	return <div>
 		<label>Choose a shape</label>
+		<input
+			value={ space }
+			onChange={ (evt) => context.actions.setSpace(evt.target.value) }
+		/>
 		<select
 			name="Shapes"
 			value={ selectedShape }
