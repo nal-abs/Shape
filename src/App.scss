@@ -7,11 +7,19 @@
 }
 
 .square{
-	background-color: black;
+	background-image: url('./Images/Sprite.png');
+	background-size: 500%;
 	position: absolute;
 }
 .circle {
-background-color: black;
-border-radius: 50%;
-position: absolute;
+	background-color: black;
+	border-radius: 50%;
+	position: absolute;
+}
+.background {
+	background-image: url('./Images/oldPaper.png');
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+
 }

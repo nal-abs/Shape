@@ -4,8 +4,9 @@ import Inputs from './component';
 import DisplayShape from './component/DisplayShape';
 
 const App = (context) => <div className="App" role="App">
-	<Inputs { ...context }/>
-	<DisplayShape { ...context }/>
+	<div className="background"><Inputs { ...context }/>
+		<DisplayShape { ...context }/>
+	</div>
 </div>;
 
 export default App;
